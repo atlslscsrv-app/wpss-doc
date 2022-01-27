@@ -1,0 +1,1497 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="CDSP">
+      
+      
+      <link rel="icon" href="../../img/favicon-32x32.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
+    
+    
+      
+        <title>Push to web survey instrument - WPSS, a web panel sample service for online comparative longitudinal surveys</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6e60f8b8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#push-to-web-survey-instrument" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="WPSS, a web panel sample service for online comparative longitudinal surveys" class="md-header__button md-logo" aria-label="WPSS, a web panel sample service for online comparative longitudinal surveys" data-md-component="logo">
+      
+  <img src="../../img/favicon-32x32.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WPSS, a web panel sample service for online comparative longitudinal surveys
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Push to web survey instrument
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../wpss/in-brief/" class="md-tabs__link">
+        WPSS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../hq/" class="md-tabs__link">
+        USER GUIDES
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../opinion-study-for-country/" class="md-tabs__link md-tabs__link--active">
+        USE CASES
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        ABOUT US
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="WPSS, a web panel sample service for online comparative longitudinal surveys" class="md-nav__button md-logo" aria-label="WPSS, a web panel sample service for online comparative longitudinal surveys" data-md-component="logo">
+      
+  <img src="../../img/favicon-32x32.png" alt="logo">
+
+    </a>
+    WPSS, a web panel sample service for online comparative longitudinal surveys
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">WPSS</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="WPSS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          WPSS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wpss/in-brief/" class="md-nav__link">
+        In brief
+      </a>
+    </li>
+  
+
+            
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wpss/components/" class="md-nav__link">
+        The software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wpss/roles/" class="md-nav__link">
+        User roles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          USER GUIDES
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="USER GUIDES" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          USER GUIDES
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../hq/">Study coordinator</a>
+          
+            <label for="__nav_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Study coordinator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Study coordinator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hq/seeding-a-study/" class="md-nav__link">
+        Seeding a study
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hq/questionnaire/" class="md-nav__link">
+        Questionnaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hq/messages/" class="md-nav__link">
+        Messages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hq/inviting-respondents/" class="md-nav__link">
+        Inviting respondents
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../nc/">Sample manager</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Sample manager" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Sample manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nc/importing-a-sample/" class="md-nav__link">
+        Importing a sample
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nc/sample-import-export-fields/" class="md-nav__link">
+        Sample file specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nc/panel-level-variables/" class="md-nav__link">
+        Sample level variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nc/nc-monitoring-surveys/" class="md-nav__link">
+        Survey
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nc/nc-monitoring-message-deliveries/" class="md-nav__link">
+        Message delivery
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../survey/">Survey manager</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Survey manager" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Survey manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../survey/survey-creation/" class="md-nav__link">
+        Create a survey
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../survey/survey-collaboration/" class="md-nav__link">
+        Translate and share a survey
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../m/">Message editor</a>
+          
+            <label for="__nav_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Message editor" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Message editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../m/message-edition/" class="md-nav__link">
+        Message edition
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tr/">Translation editor</a>
+          
+            <label for="__nav_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Translation editor" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Translation editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tr/questionnaire-translation/" class="md-nav__link">
+        Questionnaire translation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tr/messages-translation/" class="md-nav__link">
+        Messages translation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tr/wpss-panelist-portal-translation/" class="md-nav__link">
+        WPSS panelist portal translation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../d/">Data archive staff</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Data archive staff" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Data archive staff
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../p/">Panelist</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Panelist" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Panelist
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          USE CASES
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="USE CASES" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          USE CASES
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../opinion-study-for-country/" class="md-nav__link">
+        Opinion Study for "Country"
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../country-specific-waves/" class="md-nav__link">
+        Country specific waves
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Push to web survey instrument
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Push to web survey instrument
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2020-when-academic-surveys-where-pushed-to-transform" class="md-nav__link">
+    2020, when academic surveys where pushed to transform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-meant-by-push-to-web" class="md-nav__link">
+    What is meant by  push to web?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#our-proof-of-concept" class="md-nav__link">
+    Our proof of concept
+  </a>
+  
+    <nav class="md-nav" aria-label="Our proof of concept">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step" class="md-nav__link">
+    Step by step
+  </a>
+  
+    <nav class="md-nav" aria-label="Step by step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-sample-file-preparation" class="md-nav__link">
+    Step 1: sample file preparation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-import-the-sample-file-in-the-survey-platform" class="md-nav__link">
+    Step 2: import the sample file in the survey platform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-survey-configuration" class="md-nav__link">
+    Step 3: survey configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-start-the-survey" class="md-nav__link">
+    Step 4: start the survey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-end-of-the-survey" class="md-nav__link">
+    Step 5: end of the survey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-the-fieldwork" class="md-nav__link">
+    After the fieldwork
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../about/">ABOUT US</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="ABOUT US" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          ABOUT US
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2020-when-academic-surveys-where-pushed-to-transform" class="md-nav__link">
+    2020, when academic surveys where pushed to transform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-meant-by-push-to-web" class="md-nav__link">
+    What is meant by  push to web?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#our-proof-of-concept" class="md-nav__link">
+    Our proof of concept
+  </a>
+  
+    <nav class="md-nav" aria-label="Our proof of concept">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step" class="md-nav__link">
+    Step by step
+  </a>
+  
+    <nav class="md-nav" aria-label="Step by step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-sample-file-preparation" class="md-nav__link">
+    Step 1: sample file preparation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-import-the-sample-file-in-the-survey-platform" class="md-nav__link">
+    Step 2: import the sample file in the survey platform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-survey-configuration" class="md-nav__link">
+    Step 3: survey configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-start-the-survey" class="md-nav__link">
+    Step 4: start the survey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-end-of-the-survey" class="md-nav__link">
+    Step 5: end of the survey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-the-fieldwork" class="md-nav__link">
+    After the fieldwork
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="push-to-web-survey-instrument">Push to web survey instrument<a class="headerlink" href="#push-to-web-survey-instrument" title="Permanent link">🔗</a></h1>
+<h2 id="2020-when-academic-surveys-where-pushed-to-transform">2020, when academic surveys where pushed to transform<a class="headerlink" href="#2020-when-academic-surveys-where-pushed-to-transform" title="Permanent link">🔗</a></h2>
+<p>Face to face surveys are often preferred in big academic surveys, for several reasons. However, the year 2020 created a disruption, where  many survey fieldwork were suddenly interrupted by government lockdown measures.</p>
+<h2 id="what-is-meant-by-push-to-web">What is meant by  <code>push to web</code>?<a class="headerlink" href="#what-is-meant-by-push-to-web" title="Permanent link">🔗</a></h2>
+<!-- According to push to web design (citation needed) for social sciences surveys: -->
+<p>After a probabilistic household sample has been drawn using preferred methods, this survey recruitment methodology called <code>push to web</code> aims to invite members of households to participate in a web survey. Each household, of which only a postal address is known, is sent a postal letter. This letter is an invitation (hence the <code>push</code> action) for member(s) of the household to connect to a web page. The intention is to collect email addresses from members of the houselhold, and seek their consent to participate in the study. The maximum number of houselhold members emails addresses collected depends on the collection design.</p>
+<h2 id="our-proof-of-concept">Our proof of concept<a class="headerlink" href="#our-proof-of-concept" title="Permanent link">🔗</a></h2>
+<p>We designed a proof-of-concept for this purpose, using Qualtrics© as the survey platform. This method could easily be implemented with other survey platforms.</p>
+<h3 id="constraints">Constraints<a class="headerlink" href="#constraints" title="Permanent link">🔗</a></h3>
+<ul>
+<li>Provide a short URL to the online recruitment survey (this design requires the survey URL printed on a postal letter be typed onto a web browser, or alaternatively can use a <abbr title="Application Programming Interface">QR code</abbr> for this purpose)</li>
+<li>Do not use a public link as a survey link (require authentication)</li>
+<li>Provide a custom authentication to the survey, with simple and short codes, to be printed on the invitation postal letter. It should be short and non ambiguous, so that each respondent is able to type it without errors into a web browser address bar.</li>
+<li>Provide a mean to authenticate several members of each household (a code count can be set up at the survey level, the number of household members is a controlled parameter)</li>
+</ul>
+<h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">🔗</a></h2>
+<p>Create a survey, using the survey platform (no specific licence option needed). 
+The survey will be configured to require authentication. The more straightforward method available is to upload a text file including random and unambiguous short codes that will be used as login (strings). One code will be provided for each household, each code will allow a precise login count, i.e. to be used by a precise number of members of the household. For example if we want to collect a maximum of 4 respondents for each household, we will set up the <code>max login count</code> set to 4.</p>
+<h2 id="step-by-step">Step by step<a class="headerlink" href="#step-by-step" title="Permanent link">🔗</a></h2>
+<h4 id="step-1-sample-file-preparation"><strong>Step 1: sample file preparation</strong><a class="headerlink" href="#step-1-sample-file-preparation" title="Permanent link">🔗</a></h4>
+<p>The CSV file must contain at least 2 variables per household:</p>
+<ul>
+<li><code>Email</code>
+This is a requirement from the survey platforme but we can use fake addresses.</li>
+<li><code>ExternalDataReference</code>
+The value of this variable will be a unique code that will be used to authenticate each person in each household. 1 code per household since it can be used multiple times.</li>
+</ul>
+<h4 id="step-2-import-the-sample-file-in-the-survey-platform"><strong>Step 2: import the sample file in the survey platform</strong><a class="headerlink" href="#step-2-import-the-sample-file-in-the-survey-platform" title="Permanent link">🔗</a></h4>
+<p>Go to <code>Contacts ➡ Create Mailing List</code> and enter the name of the list. Then <code>Add Contacts</code> and import the file created during step 1.</p>
+<h4 id="step-3-survey-configuration"><strong>Step 3: survey configuration</strong><a class="headerlink" href="#step-3-survey-configuration" title="Permanent link">🔗</a></h4>
+<ul>
+<li>
+<p><strong>General survey options</strong>
+In <code>Survey Options</code>:
+Enable <code>Open Access. Allow anyone to take this survey.</code>
+Disable <code>Prevent Ballot Box Stuffing. Keep people from taking this survey more than once.</code></p>
+</li>
+<li>
+<p><strong>Survey flow</strong>
+To enable the authentication on a survey, go in your survey project page and click on <code>Survey Flow</code>. Then add the <code>Authenticator</code> element by clicking on <code>Add a New Element Here</code>. Make sure that this element is placed at the top of the survey flow since we want the respondent to authenticate first (you can move elements by dragging the <code>Move</code> option and dropping it where you want). All the other elements should be placed inside the <code>Authenticator</code> branch so they can be accessed only if the user has been successfully authenticated.</p>
+</li>
+</ul>
+<p>You will then have to configure the authenticator element:</p>
+<ul>
+<li>Authentication Type: <code>Contact</code></li>
+<li><code>Authenticate Using Contact</code>: choose the library and then the mailing list imported in step 2</li>
+<li><code>Authentication Field ➡ External Data Reference</code> (note: you can also add an optional label that will be displayed in the survey instead of <code>External Data Reference</code>)</li>
+<li>In the <code>Options</code> element, make sure <code>Allow authenticating respondents to retake the authenticated section</code> is checked so that one invite can allow multiple answers (for every person in the household). Other useful options can also be tweaked as you need (If a respondent tries to authenticated more than the <code>Maximum Authentication Attempts</code> value, the survey ends.).</li>
+</ul>
+<p>You should get something similar to this:</p>
+<p><img alt="Survey flow" src="../../img/use/push2web-survey-flow.png" /></p>
+<p><img alt="Survey Options" src="../../img/use/push2web-options.png" /></p>
+<p>You can now save the survey flow.</p>
+<h4 id="step-4-start-the-survey"><strong>Step 4: start the survey</strong><a class="headerlink" href="#step-4-start-the-survey" title="Permanent link">🔗</a></h4>
+<p>Publish the survey and distribute the anonymous link, to be found under <code>Distributions ➡ Anonymous Link</code>. Each respondent will have to type their code to be able to answer the survey.</p>
+<h4 id="step-5-end-of-the-survey"><strong>Step 5: end of the survey</strong><a class="headerlink" href="#step-5-end-of-the-survey" title="Permanent link">🔗</a></h4>
+<p>When the survey ends, you might need to do some housekeeping on the data collected to remove incomplete answers, duplicate answers, and eventually randomly select the answers count to keep for each household. </p>
+<h4 id="after-the-fieldwork"><strong>After the fieldwork</strong><a class="headerlink" href="#after-the-fieldwork" title="Permanent link">🔗</a></h4>
+<p>Once the push to web is completed, you can use the new sample file created from the answers as a <a href="../../nc/sample-import-export-fields/">sample import file for WPSS</a>.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../country-specific-waves/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Country specific waves" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Country specific waves
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../about/" class="md-footer__link md-footer__link--next" aria-label="Next: About us" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              About us
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 823782. Content is Licensed as CC BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
+      
+    
+  </body>
+</html>
