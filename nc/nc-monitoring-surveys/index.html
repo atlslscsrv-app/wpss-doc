@@ -653,6 +653,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exporting-response-statuses" class="md-nav__link">
+    Exporting response statuses
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1178,6 +1185,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exporting-response-statuses" class="md-nav__link">
+    Exporting response statuses
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1205,8 +1219,36 @@
 <p><img alt="Individual links details filter on" src="../../img/nc/filters-on.png" /></p>
 <p>A red dot idicates a filter is active. The blue label shows the total sample size and records filtered.
 To deactivate a filter, click the <code>Reset</code>button.</p>
-<p>Results can be browsed page by page using the pagination at the botom of each page.</p>
+<p>Results can be browsed page by page using the pagination at the bottom of each page.</p>
 <p><img alt="Individual links details pagination" src="../../img/nc/paginator.png" /></p>
+<h2 id="exporting-response-statuses">Exporting response statuses<a class="headerlink" href="#exporting-response-statuses" title="Permanent link">🔗</a></h2>
+<p>To get individual response status as a CSV file, click on the grey <code>Export response statuses</code> button</p>
+<p><img alt="Response statuses button" src="../../img/nc/nc-export-response-status-button.png" /></p>
+<p>You will get a two-columns CSV file, one record for each person in your assigned sample:</p>
+<dl>
+<dt><code>ess_id</code></dt>
+<dd>
+<p>as defined <a href="/nc/sample-import-export-fields/#idno">here</a></p>
+</dd>
+<dt><code>status</code></dt>
+<dd>
+<p>values being one of:</p>
+<dl>
+<dt><code>Pending</code></dt>
+<dd>
+<p>panelists did not yet enter the survey</p>
+</dd>
+<dt><code>SurveyStarted</code></dt>
+<dd>
+<p>panelist did enter the survey</p>
+</dd>
+<dt><code>SurveyFinished</code></dt>
+<dd>
+<p>panelist completed the survey.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 
               
             </article>
