@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../../img/favicon-32x32.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
     
     
       
@@ -19,15 +19,16 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
           
           
           <meta name="theme-color" content="#4051b5">
         
+      
       
     
     
@@ -41,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -424,8 +425,6 @@
         
           
         
-          
-        
       
       
         
@@ -470,20 +469,6 @@
     <li class="md-nav__item">
       <a href="../../hq/questionnaire/" class="md-nav__link">
         Questionnaire
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../hq/messages/" class="md-nav__link">
-        Messages
       </a>
     </li>
   
@@ -1243,23 +1228,92 @@
 <p>Clicking on the message internal ID (in blue) opens the detailed vue of the message delivery.</p>
 <h2 id="email-delivery-details">Email delivery details<a class="headerlink" href="#email-delivery-details" title="Permanent link">🔗</a></h2>
 <p>Besides the delivery details, each email detailed delivery page shows global statitics:</p>
-<ul>
-<li>Current total number of panelists</li>
-<li>Number of eligible panelists to whom the email message was <code>Sent</code>,</li>
-<li>Estimated number of email messages opened (at least),</li>
-<li>Temporary email delivery problem (soft bounce),</li>
-<li>Permanent email delivery problem (hard bounce),</li>
-<li>Other email failures.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th align="left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Current Panelists</code></td>
+<td align="left">The count of panelists presently belonging to the panel. This number may be higher than the number of messages sent for different reasons among which:<br/>- A panelist is added to the panel after the message was scheduled to be sent.<br/>- A panelist is not reachable by the chosen contact mode<br/>- A panelist has opted out from messages</td>
+</tr>
+<tr>
+<td><code>Attempted</code></td>
+<td align="left">The count of panelists who will receive a link by email if everything goes well</td>
+</tr>
+<tr>
+<td><code>Delivered</code></td>
+<td align="left">The number of messages that were sent, or that are scheduled to be sent by Qualtrics. If the sending is scheduled in the future, all subsequent columns should be zero.</td>
+</tr>
+<tr>
+<td><code>Opened</code></td>
+<td align="left">Lower bound of the number of panelists having opened the email.<br/>Example: a value of 10 would mean that at least so many panelists have opened the email, but the actual number may be higher if some messages were opened unbeknownst to Qualtrics</td>
+</tr>
+<tr>
+<td><code>Soft Bounce</code></td>
+<td align="left">Number of emails that bounced back for a temporary reason (a full mailbox for example)</td>
+</tr>
+<tr>
+<td><code>Hard Bounce</code></td>
+<td align="left">Number of emails that bounced back due to a permanent reason (an invalid address for example)</td>
+</tr>
+<tr>
+<td><code>Other Failures</code></td>
+<td align="left">Emails that failed to be sent and did not “bounce back” (an email address that is spotted as invalid before sending, for example)</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="Email delivery details" src="../../img/nc/email-delivery-details.png" /></p>
 <p>Detils are shown on a panelist level.</p>
 <p><img alt="Email delivery details" src="../../img/nc/email-stats-detailed.png" /></p>
 <p>Results can be filtered by study ID (ESS ID) and delivery status.</p>
 <p><img alt="Email delivery details" src="../../img/nc/email-stats-filtered.png" /></p>
 <h2 id="sms-delivery-details">SMS delivery details<a class="headerlink" href="#sms-delivery-details" title="Permanent link">🔗</a></h2>
+<p>First, after a distribution has been sent by sms, you have access to general statistics on the sending.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th align="left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Links to send</code></td>
+<td align="left">Number of links delivered by this message. The count may be less than reported as “Sent” by Qualtrics in case several trials are necessary to send at least one message.</td>
+</tr>
+<tr>
+<td><code>Sent</code></td>
+<td align="left">Number of logical messages reported as sent by Qualtrics (one logical message may, if too long, break up in several “physical” SMS messages)</td>
+</tr>
+<tr>
+<td><code>Failed</code></td>
+<td align="left">Messages the survey platform failed to send</td>
+</tr>
+<tr>
+<td><code>SMS messages consumed</code></td>
+<td align="left">Number of SMS messages reported as sent by Qualtrics</td>
+</tr>
+<tr>
+<td><code>Credits consumed</code></td>
+<td align="left">Amount of Qualtrics SMS credits consumed</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="SMS delivery details" src="../../img/nc/nc-sms-delievry-detail.png" /></p>
+<p>To have detailed statistics of a SMS distribution, you must transmit to the support the id of the desired distribution.</p>
+<p>Then a new table will appear on the same page with individual statistics.</p>
+<p><img alt="WPSS SMS delivery" src="../../img/nc/nc-sms-delivery-detail-indiv.png" /></p>
+
+
+
 
               
             </article>
+            
           </div>
         </div>
         
@@ -1267,7 +1321,8 @@
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../nc-monitoring-surveys/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Survey" rel="prev">
@@ -1326,10 +1381,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
       
     
   </body>

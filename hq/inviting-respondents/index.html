@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../../img/favicon-32x32.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
     
     
       
@@ -19,15 +19,16 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
           
           
           <meta name="theme-color" content="#4051b5">
         
+      
       
     
     
@@ -41,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -426,8 +427,6 @@
         
           
         
-          
-        
       
       
         
@@ -472,20 +471,6 @@
     <li class="md-nav__item">
       <a href="../questionnaire/" class="md-nav__link">
         Questionnaire
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../messages/" class="md-nav__link">
-        Messages
       </a>
     </li>
   
@@ -1294,7 +1279,7 @@
   <h1>Inviting respondents</h1>
 
 <h2 id="inviting-panelists">Inviting panelists<a class="headerlink" href="#inviting-panelists" title="Permanent link">🔗</a></h2>
-<p>Once all preliminary steps have been performed (checking <a href="../messages/">messages</a> and <a href="../questionnaire/">questionnaires</a> availability and translations completeness), the study coordinator is able to invite sample(s) to answer a survey. To be able to intertwine emails and short text messages modes as well as to get one unique answer per panelist, we use <a href="#create-a-link-set"><strong>individual links</strong></a> as our only way to invite respondents to answer a survey. This is done behind the scene trough the survey platform API.</p>
+<p>Once all preliminary steps have been performed (checking <a href="../questionnaire/">questionnaires</a> availability and translations completeness), the study coordinator is able to invite sample(s) to answer a survey. To be able to intertwine emails and short text messages modes as well as to get one unique answer per panelist, we use <a href="#create-a-link-set"><strong>individual links</strong></a> as our only way to invite respondents to answer a survey. This is done behind the scene trough the survey platform API.</p>
 <h2 id="create-a-link-set">Create a link set<a class="headerlink" href="#create-a-link-set" title="Permanent link">🔗</a></h2>
 <p>Once a questionnaire has been created and translated and the samples are ready to receive invitations, the next step will be to create a set of individual links. Select the <code>Individual links</code> card.</p>
 <p><img alt="WPSS individual links card" src="../../img/hq/links-card.png" /></p>
@@ -1310,12 +1295,12 @@
 <p><img alt="WPSS links generation" src="../../img/hq/links-generation.png" /></p>
 <p>Choose and <strong>expiration date</strong>, meaning the deadline after which all unused individual links to the survey will not allow panelists to answer anymore.</p>
 <p><img alt="WPSS links generation expiration date" src="../../img/hq/links-generation-date.png" /></p>
-<p><img alt="WPSS links generation expiration date" src="../../img/hq/links-generation-stats.png" /></p>
+<p><img alt="WPSS links generation stats" src="../../img/hq/links-generation-stats.png" /></p>
 <h2 id="inviting-panelists-to-answer-a-survey">Inviting panelists to answer a survey<a class="headerlink" href="#inviting-panelists-to-answer-a-survey" title="Permanent link">🔗</a></h2>
 <p>When a link set is generated, every included panelist can see their individual link by logging into their account on the <a href="/p/">WPSS panelist portal</a>.</p>
 <p>However, it may be convenient to send an email or a text message to eligible panelists, drawing their attention on a new survey being available, and directly giving them the link they would otherwise find on their portal page.</p>
 <p>This is exactly the purpose of Message Deliveries. For an existing individual link set, the message delivery procedure lets you choose a <strong>primary or preferred mode</strong> (email or SMS), a message template to use, a subset of panelists to target (eg, those who haven't started the survey yet) and schedule a sending date.</p>
-<p>You can also optionaly add a <strong>fallback contact mode</strong>, that will be used to get in touch with panelists not reachable by the primary channel. </p>
+<p>You can also optionaly add a <strong>fallback contact mode</strong>, that will be used to get in touch with panelists not reachable by the primary channel.</p>
 <p><img alt="WPSS message card" src="../../img/hq/messages-card.png" /></p>
 <p>Let's distribute a survey, with email as primary mode. Click <code>New email delivery</code>:</p>
 <p><img alt="WPSS deliveries buttons" src="../../img/hq/deliveries-buttons.png" /></p>
@@ -1331,7 +1316,7 @@
 <p><img alt="WPSS email delivery" src="../../img/hq/fallback-sms.png" /></p>
 <p><img alt="WPSS email delivery" src="../../img/hq/fallback-sms-summary.png" /></p>
 <p><img alt="WPSS email delivery" src="../../img/hq/delivery-reachable.png" /></p>
-<p>The message is in the process of being sent... </p>
+<p>The message is in the process of being sent...</p>
 <h2 id="sending-reminders">Sending reminders<a class="headerlink" href="#sending-reminders" title="Permanent link">🔗</a></h2>
 <p>Once a linkset is created, the <strong>same linkset</strong> can be used as many time as desired to send reminders, using preferred principal mode and optional secondary (fallback) mode.</p>
 <p>As an example, we will now send a reminder using primarily short text messages, only to panelists who either did not complete the survey or did not event start it.</p>
@@ -1349,33 +1334,37 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Sent</code></td>
-<td align="left">total emails sent</td>
+<td><code>Current Panelists</code></td>
+<td align="left">The count of panelists presently belonging to the panel. This number may be higher than the number of messages sent for different reasons among which:<br/>- A panelist is added to the panel after the message was scheduled to be sent.<br/>- A panelist is not reachable by the chosen contact mode<br/>- A panelist has opted out from messages</td>
+</tr>
+<tr>
+<td><code>Attempted</code></td>
+<td align="left">The count of panelists who will receive a link by email if everything goes well</td>
+</tr>
+<tr>
+<td><code>Delivered</code></td>
+<td align="left">The number of messages that were sent, or that are scheduled to be sent by Qualtrics. If the sending is scheduled in the future, all subsequent columns should be zero.</td>
 </tr>
 <tr>
 <td><code>Opened</code></td>
-<td align="left">emails opened by recipient count</td>
+<td align="left">Lower bound of the number of panelists having opened the email.<br/>Example: a value of 10 would mean that at least so many panelists have opened the email, but the actual number may be higher if some messages were opened unbeknownst to Qualtrics</td>
 </tr>
 <tr>
-<td><code>Failed</code></td>
-<td align="left">emails system failed to send count</td>
+<td><code>Soft Bounce</code></td>
+<td align="left">Number of emails that bounced back for a temporary reason (a full mailbox for example)</td>
 </tr>
 <tr>
-<td><code>Bounced</code></td>
-<td align="left">emails sent to inaccurate address and rejected</td>
+<td><code>Hard Bounce</code></td>
+<td align="left">Number of emails that bounced back due to a permanent reason (an invalid address for example)</td>
 </tr>
 <tr>
-<td><code>Blocked</code></td>
-<td align="left">emails the survey platform detected as duplicate message within one hour time interval</td>
-</tr>
-<tr>
-<td><code>Complaints</code></td>
-<td align="left">how many recipient sent back a complaint</td>
+<td><code>Other Failures</code></td>
+<td align="left">Emails that failed to be sent and did not “bounce back” (an email address that is spotted as invalid before sending, for example)</td>
 </tr>
 </tbody>
 </table>
-<p><img alt="WPSS email delivery statistics" src="../../img/hq/email-delivery-stats.png" /></p>
-<p>The <code>Details</code> buttons provides this information at an individual panelist level.</p>
+<p><img alt="WPSS email delivery statistics" src="../../img/hq/hq-msgd-stats.png" /></p>
+<p>The click on <code>Panel name</code> buttons provides this information at an individual panelist level.</p>
 <h3 id="short-text-messages">Short text messages<a class="headerlink" href="#short-text-messages" title="Permanent link">🔗</a></h3>
 <p>Short text messages statistics include the following items:</p>
 <table>
@@ -1387,27 +1376,37 @@
 </thead>
 <tbody>
 <tr>
-<td><code>SMS messages sent</code></td>
-<td align="left">total recipients count</td>
+<td><code>Links to send</code></td>
+<td align="left">Number of links delivered by this message. The count may be less than reported as “Sent” by Qualtrics in case several trials are necessary to send at least one message.</td>
 </tr>
 <tr>
-<td><code>SMS messages failed</code></td>
-<td align="left">messages the survey platform failed to send</td>
+<td><code>Sent</code></td>
+<td align="left">Number of logical messages reported as sent by Qualtrics (one logical message may, if too long, break up in several “physical” SMS messages)</td>
 </tr>
 <tr>
-<td><code>Total messages</code></td>
-<td align="left">parts count: depending on characters count and the encoding used, the message is transformed into a multipart messages</td>
+<td><code>Failed</code></td>
+<td align="left">Messages the survey platform failed to send</td>
+</tr>
+<tr>
+<td><code>SMS messages consumed</code></td>
+<td align="left">Number of SMS messages reported as sent by Qualtrics</td>
 </tr>
 <tr>
 <td><code>Credits consumed</code></td>
-<td align="left">total cost charged by the survey platform (using parts count)</td>
+<td align="left">Amount of Qualtrics SMS credits consumed</td>
 </tr>
 </tbody>
 </table>
-<p><img alt="WPSS email delivery" src="../../img/hq/sms-stats.png" /></p>
+<p><img alt="WPSS email delivery" src="../../img/hq/hq-sms-stats.png" /></p>
+<p>To have detailed statistics of a sms distribution, you must transmit to the support the ID of the desired distribution.</p>
+<p><img alt="WPSS email delivery" src="../../img/hq/hq-sms-detailled-stats.png" /></p>
+
+
+
 
               
             </article>
+            
           </div>
         </div>
         
@@ -1415,10 +1414,11 @@
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../messages/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Messages" rel="prev">
+        <a href="../questionnaire/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Questionnaire" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1427,7 +1427,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Messages
+              Questionnaire
             </div>
           </div>
         </a>
@@ -1474,10 +1474,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
       
     
   </body>
